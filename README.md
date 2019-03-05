@@ -24,8 +24,8 @@ func main() {
 
 package main
 
-import . ""
-import ""
+import . "github.com/go-opencv/go-opencv/gocv"
+import "github.com/gonum/matrix/mat64"
 
 func main() {
   objPts := mat64.NewDense(4, 3, []float64}
@@ -46,6 +46,25 @@ func main() {
 ```
 
 ```
+cd samples
+go run webcam.go
+
+git clone https://github.com/go-opencv.git
+cd go-opencv
+git remote rename origin upstream
+git remote add origin https://github.com/your_github_account/go-opencv.git
+
+git checkgout -b your-feature-branch
+
+git commit -m 'new feature'
+git push origin your-feature-branch
+
+go get github.com/go-opencv/go-opencv
+cd $GOPATH/src/github.com/go-opencv/samples
+go run hellocv.go
+
+go get github.com/go-opencv/go-opencv
+cd ${GoOpenCVRoot}/trunk/samples && go run hellocv.go
 ```
 
 ```
